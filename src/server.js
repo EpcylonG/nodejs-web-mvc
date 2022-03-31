@@ -5,6 +5,8 @@ const { json } = require("body-parser");
 const cors = require("cors");
 
 const productRouter = require("./routes/product-routes");
+const userRouter = require("./routes/user-routes");
+
 const config = require("./config/config");
 
 const app = express();
@@ -19,5 +21,6 @@ app.use(
 );
 
 app.use(productRouter);
+app.use(userRouter);
 
 module.exports = app;

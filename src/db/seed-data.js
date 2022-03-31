@@ -38,7 +38,48 @@ function getProductSeed() {
     },
     ];
   }
+  function getSeedUsers() {
+    return [
+      {
+        _id:"100",
+        firstName: "Jordan",
+        lastName: "Peterson",
+        email: "jordan@gmail.com",
+      },
+      {
+        _id:"101",
+        firstName: "Margaret",
+        lastName: "Watkins",
+        email: "marga@gmail.com",
+      },
+      {
+        _id:"102",
+        firstName: "Mable",
+        lastName: "Schneider",
+        email: "mab@gmail.com",
+      },
+      {
+        _id:"103",
+        firstName: "Alta",
+        lastName: "Harris",
+        email: "alta@gmail.com",
+      },
+      {
+        _id:"104",
+        firstName: "Darrell",
+        lastName: "Wilkerson",
+        email: "darrell@gmail.com",
+      },
+      {
+        _id:"105",
+        firstName: "Ryan",
+        lastName: "McGuire",
+        email: "ryan@gmail.com",
+      },
+    ];
+  }
 
   module.exports = {
     getProductSeed: getProductSeed,
+    getSeedUsers: getSeedUsers,
   };

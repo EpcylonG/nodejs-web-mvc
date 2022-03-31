@@ -1,5 +1,5 @@
 const db = require("../models");
-const { getProductSeed } = require("./seed-data");
+const { getProductSeed, getSeedUsers } = require("./seed-data");
 
 async function seedProducts() {
   const product = getProductSeed();
@@ -8,11 +8,14 @@ async function seedProducts() {
   await db.Product.create([...product]);
 }
 
-function getRandomItem(arr = []) {
-  return arr[Math.floor(Math.random() * arr.length)];
+async function seedUsers() {
+  const user = getSeedUsers();
+
+  await db.User.deleteMany({});
+  await db.User.create([...user]);
 }
 
 module.exports = {
   seedProducts: seedProducts,
-  getRandomItem: getRandomItem,
+  seedUsers:seedUsers,
 };
